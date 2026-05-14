@@ -1,0 +1,8 @@
+:root { --mr-force-blue: #2563eb; --mr-force-green: #16a34a; }
+.workspace-body[data-page-route="Workspaces/MR Force"] .widget,
+.workspace-body[data-page-route="Workspaces/MR Force"] .shortcut-widget-box {
+  border-radius: 14px;
+  box-shadow: 0 8px 24px rgba(15, 23, 42, 0.06);
+}
+.mr-force-empty-state { padding: 2rem; text-align: center; color: var(--text-muted); }
+@media (max-width: 768px) { .workspace-body[data-page-route="Workspaces/MR Force"] .widget { margin-bottom: .75rem; } }

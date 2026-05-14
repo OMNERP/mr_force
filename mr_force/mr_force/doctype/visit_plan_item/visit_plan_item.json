@@ -1,0 +1,48 @@
+{
+  "doctype": "DocType",
+  "name": "Visit Plan Item",
+  "module": "MR Force",
+  "custom": 0,
+  "istable": 1,
+  "is_submittable": 0,
+  "autoname": "format:PLAN-ITEM-.#####",
+  "title_field": "doctor",
+  "track_changes": 1,
+  "allow_rename": 1,
+  "fields": [
+    {
+      "label": "Doctor",
+      "fieldname": "doctor",
+      "fieldtype": "Link",
+      "options": "Doctor Profile"
+    },
+    {
+      "label": "Pharmacy",
+      "fieldname": "pharmacy",
+      "fieldtype": "Link",
+      "options": "Pharmacy Profile"
+    },
+    {
+      "label": "Planned Time",
+      "fieldname": "planned_time",
+      "fieldtype": "Time"
+    },
+    {
+      "label": "Activity Type",
+      "fieldname": "activity_type",
+      "fieldtype": "Link",
+      "options": "Activity Type"
+    },
+    {
+      "label": "Priority",
+      "fieldname": "priority",
+      "fieldtype": "Select",
+      "options": "High\nMedium\nLow",
+      "default": "Medium"
+    }
+  ],
+  "permissions": [],
+  "sort_field": "modified",
+  "sort_order": "DESC",
+  "engine": "InnoDB"
+}
