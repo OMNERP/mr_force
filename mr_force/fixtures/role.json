@@ -2,11 +2,13 @@
   {
     "doctype": "Role",
     "role_name": "MR Force Manager",
-    "desk_access": 1
+    "desk_access": 1,
+    "name": "MR Force Manager"
   },
   {
     "doctype": "Role",
     "role_name": "Medical Representative",
-    "desk_access": 1
+    "desk_access": 1,
+    "name": "Medical Representative"
   }
 ]

@@ -26,3 +26,8 @@ bench --site <site> migrate
 ## Frappe module layout
 
 The app uses the standard Frappe module import path `mr_force.mr_force`. Standard DocType controllers live under `mr_force/mr_force/doctype/<doctype>/<doctype>.py`, so Frappe imports `Doctor Specialty` from `mr_force.mr_force.doctype.doctor_specialty.doctor_specialty` instead of falling back to `frappe.core`.
+
+
+## Asset build safety
+
+MR Force includes Frappe-discoverable bundle entry files at `mr_force/public/js/mr_force.bundle.js` and `mr_force/public/css/mr_force.bundle.css`, plus root `package.json` metadata, so `bench build --app mr_force` has deterministic asset inputs after `bench get-app` registers the app.

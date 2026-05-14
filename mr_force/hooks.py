@@ -9,8 +9,8 @@ app_home = "/app/mr-force"
 
 required_apps = ["frappe"]
 
-app_include_css = ["/assets/mr_force/css/mr_force.css"]
-app_include_js = ["/assets/mr_force/js/mr_force.js"]
+app_include_css = ["mr_force.bundle.css"]
+app_include_js = ["mr_force.bundle.js"]
 
 doctype_js = {
     "Doctor Visit": "public/js/doctor_visit.js",
