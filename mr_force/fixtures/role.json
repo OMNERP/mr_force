@@ -1,0 +1,12 @@
+[
+  {
+    "doctype": "Role",
+    "role_name": "MR Force Manager",
+    "desk_access": 1
+  },
+  {
+    "doctype": "Role",
+    "role_name": "Medical Representative",
+    "desk_access": 1
+  }
+]

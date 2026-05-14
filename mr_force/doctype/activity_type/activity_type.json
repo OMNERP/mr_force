@@ -1,0 +1,71 @@
+{
+  "doctype": "DocType",
+  "name": "Activity Type",
+  "module": "MR Force",
+  "custom": 0,
+  "istable": 0,
+  "is_submittable": 0,
+  "autoname": "field:activity_type",
+  "title_field": "activity_type",
+  "track_changes": 1,
+  "allow_rename": 1,
+  "fields": [
+    {
+      "label": "Activity Type",
+      "fieldname": "activity_type",
+      "fieldtype": "Data",
+      "reqd": 1,
+      "unique": 1
+    },
+    {
+      "label": "Description",
+      "fieldname": "description",
+      "fieldtype": "Small Text"
+    }
+  ],
+  "permissions": [
+    {
+      "role": "System Manager",
+      "read": 1,
+      "write": 1,
+      "create": 1,
+      "delete": 1,
+      "submit": 1,
+      "cancel": 1,
+      "amend": 1,
+      "export": 1,
+      "print": 1,
+      "email": 1,
+      "report": 1,
+      "share": 1
+    },
+    {
+      "role": "MR Force Manager",
+      "read": 1,
+      "write": 1,
+      "create": 1,
+      "delete": 1,
+      "submit": 1,
+      "cancel": 1,
+      "amend": 1,
+      "export": 1,
+      "print": 1,
+      "email": 1,
+      "report": 1,
+      "share": 1
+    },
+    {
+      "role": "Medical Representative",
+      "read": 1,
+      "write": 1,
+      "create": 1,
+      "export": 1,
+      "print": 1,
+      "email": 1,
+      "report": 1
+    }
+  ],
+  "sort_field": "modified",
+  "sort_order": "DESC",
+  "engine": "InnoDB"
+}
