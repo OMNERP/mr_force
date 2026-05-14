@@ -1,0 +1,11 @@
+{
+  "name": "mr_force",
+  "version": "0.1.0",
+  "private": true,
+  "description": "MR Force Frappe app asset metadata",
+  "scripts": {
+    "build": "echo \"MR Force uses Frappe esbuild bundle discovery\""
+  },
+  "dependencies": {},
+  "devDependencies": {}
+}

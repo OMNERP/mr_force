@@ -1,0 +1,100 @@
+{
+  "doctype": "DocType",
+  "name": "Field Notification Log",
+  "module": "MR Force",
+  "custom": 0,
+  "istable": 0,
+  "autoname": "format:FIELD-NOTIF-.#####",
+  "title_field": "title",
+  "track_changes": 1,
+  "allow_rename": 1,
+  "fields": [
+    {
+      "label": "Title",
+      "fieldname": "title",
+      "fieldtype": "Data",
+      "reqd": 1
+    },
+    {
+      "label": "Notification Type",
+      "fieldname": "notification_type",
+      "fieldtype": "Select",
+      "options": "Follow Up\nReminder\nKPI Alert\nSystem",
+      "default": "Reminder"
+    },
+    {
+      "label": "Assigned To",
+      "fieldname": "assigned_to",
+      "fieldtype": "Link",
+      "options": "Medical Representative"
+    },
+    {
+      "label": "Due Date",
+      "fieldname": "due_date",
+      "fieldtype": "Date"
+    },
+    {
+      "label": "Reference Doctype",
+      "fieldname": "reference_doctype",
+      "fieldtype": "Link",
+      "options": "DocType"
+    },
+    {
+      "label": "Reference Name",
+      "fieldname": "reference_name",
+      "fieldtype": "Dynamic Link",
+      "options": "reference_doctype"
+    },
+    {
+      "label": "Status",
+      "fieldname": "status",
+      "fieldtype": "Select",
+      "options": "Open\nClosed\nCancelled",
+      "default": "Open"
+    },
+    {
+      "label": "Message",
+      "fieldname": "message",
+      "fieldtype": "Small Text"
+    }
+  ],
+  "permissions": [
+    {
+      "role": "System Manager",
+      "read": 1,
+      "write": 1,
+      "create": 1,
+      "delete": 1,
+      "export": 1,
+      "print": 1,
+      "email": 1,
+      "report": 1,
+      "share": 1
+    },
+    {
+      "role": "MR Force Manager",
+      "read": 1,
+      "write": 1,
+      "create": 1,
+      "delete": 1,
+      "export": 1,
+      "print": 1,
+      "email": 1,
+      "report": 1,
+      "share": 1
+    },
+    {
+      "role": "Medical Representative",
+      "read": 1,
+      "write": 1,
+      "create": 1,
+      "export": 1,
+      "print": 1,
+      "email": 1,
+      "report": 1
+    }
+  ],
+  "sort_field": "modified",
+  "sort_order": "DESC",
+  "engine": "InnoDB"
+}
