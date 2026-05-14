@@ -33,3 +33,11 @@ def test_all_fixture_documents_have_names():
 def test_asset_bundle_entrypoints_exist():
     assert (ROOT / "mr_force" / "public" / "js" / "mr_force.bundle.js").is_file()
     assert (ROOT / "mr_force" / "public" / "css" / "mr_force.bundle.css").is_file()
+
+
+def test_asset_bundles_are_self_contained():
+    css_bundle = (ROOT / "mr_force" / "public" / "css" / "mr_force.bundle.css").read_text()
+    js_bundle = (ROOT / "mr_force" / "public" / "js" / "mr_force.bundle.js").read_text()
+    assert "@import" not in css_bundle
+    assert 'import "./' not in js_bundle
+    assert "mr_force.capture_location" in js_bundle

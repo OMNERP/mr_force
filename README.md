@@ -30,4 +30,4 @@ The app uses the standard Frappe module import path `mr_force.mr_force`. Standar
 
 ## Asset build safety
 
-MR Force includes Frappe-discoverable bundle entry files at `mr_force/public/js/mr_force.bundle.js` and `mr_force/public/css/mr_force.bundle.css`, plus root `package.json` metadata, so `bench build --app mr_force` has deterministic asset inputs after `bench get-app` registers the app.
+MR Force includes self-contained Frappe-discoverable bundle entry files at `mr_force/public/js/mr_force.bundle.js` and `mr_force/public/css/mr_force.bundle.css`, plus root `package.json` metadata, so `bench build --app mr_force` has deterministic asset inputs after `bench get-app` registers the app. The bundle files intentionally do not use relative imports, which keeps Frappe esbuild temporary-directory builds from failing on missing sibling files.
