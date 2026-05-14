@@ -1,0 +1,39 @@
+{
+  "doctype": "DocType",
+  "name": "Visit Feedback",
+  "module": "MR Force",
+  "custom": 0,
+  "istable": 1,
+  "is_submittable": 0,
+  "autoname": "format:FEEDBACK-.#####",
+  "title_field": "feedback_type",
+  "track_changes": 1,
+  "allow_rename": 1,
+  "fields": [
+    {
+      "label": "Feedback Type",
+      "fieldname": "feedback_type",
+      "fieldtype": "Select",
+      "options": "Clinical Interest\nObjection\nCompetitor Mention\nPrescription Potential\nOther"
+    },
+    {
+      "label": "Rating",
+      "fieldname": "rating",
+      "fieldtype": "Rating"
+    },
+    {
+      "label": "Feedback",
+      "fieldname": "feedback",
+      "fieldtype": "Small Text"
+    },
+    {
+      "label": "Follow Up Required",
+      "fieldname": "follow_up_required",
+      "fieldtype": "Check"
+    }
+  ],
+  "permissions": [],
+  "sort_field": "modified",
+  "sort_order": "DESC",
+  "engine": "InnoDB"
+}

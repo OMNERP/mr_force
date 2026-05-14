@@ -1,0 +1,107 @@
+{
+  "doctype": "DocType",
+  "name": "KPI Target",
+  "module": "MR Force",
+  "custom": 0,
+  "istable": 0,
+  "is_submittable": 0,
+  "autoname": "field:target_name",
+  "title_field": "target_name",
+  "track_changes": 1,
+  "allow_rename": 1,
+  "fields": [
+    {
+      "label": "Target Name",
+      "fieldname": "target_name",
+      "fieldtype": "Data",
+      "reqd": 1
+    },
+    {
+      "label": "Medical Representative",
+      "fieldname": "medical_representative",
+      "fieldtype": "Link",
+      "options": "Medical Representative"
+    },
+    {
+      "label": "Territory",
+      "fieldname": "territory",
+      "fieldtype": "Link",
+      "options": "Territory Coverage"
+    },
+    {
+      "label": "Month",
+      "fieldname": "month",
+      "fieldtype": "Date",
+      "reqd": 1
+    },
+    {
+      "label": "Doctor Visit Target",
+      "fieldname": "doctor_visit_target",
+      "fieldtype": "Int",
+      "default": 0
+    },
+    {
+      "label": "Pharmacy Visit Target",
+      "fieldname": "pharmacy_visit_target",
+      "fieldtype": "Int",
+      "default": 0
+    },
+    {
+      "label": "Coverage Target %",
+      "fieldname": "coverage_target_percent",
+      "fieldtype": "Percent",
+      "default": 0
+    },
+    {
+      "label": "Sample Target",
+      "fieldname": "sample_target",
+      "fieldtype": "Int",
+      "default": 0
+    }
+  ],
+  "permissions": [
+    {
+      "role": "System Manager",
+      "read": 1,
+      "write": 1,
+      "create": 1,
+      "delete": 1,
+      "submit": 1,
+      "cancel": 1,
+      "amend": 1,
+      "export": 1,
+      "print": 1,
+      "email": 1,
+      "report": 1,
+      "share": 1
+    },
+    {
+      "role": "MR Force Manager",
+      "read": 1,
+      "write": 1,
+      "create": 1,
+      "delete": 1,
+      "submit": 1,
+      "cancel": 1,
+      "amend": 1,
+      "export": 1,
+      "print": 1,
+      "email": 1,
+      "report": 1,
+      "share": 1
+    },
+    {
+      "role": "Medical Representative",
+      "read": 1,
+      "write": 1,
+      "create": 1,
+      "export": 1,
+      "print": 1,
+      "email": 1,
+      "report": 1
+    }
+  ],
+  "sort_field": "modified",
+  "sort_order": "DESC",
+  "engine": "InnoDB"
+}
