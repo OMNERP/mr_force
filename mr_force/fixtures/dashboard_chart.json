@@ -10,7 +10,8 @@
     "timespan": "Last Year",
     "time_interval": "Monthly",
     "type": "Line",
-    "is_public": 1
+    "is_public": 1,
+    "filters_json": "[]"
   },
   {
     "doctype": "Dashboard Chart",
@@ -22,7 +23,8 @@
     "group_by_type": "Count",
     "group_by_based_on": "status",
     "type": "Donut",
-    "is_public": 1
+    "is_public": 1,
+    "filters_json": "[]"
   },
   {
     "doctype": "Dashboard Chart",
@@ -34,6 +36,7 @@
     "group_by_type": "Count",
     "group_by_based_on": "engagement_level",
     "type": "Bar",
-    "is_public": 1
+    "is_public": 1,
+    "filters_json": "[]"
   }
 ]
