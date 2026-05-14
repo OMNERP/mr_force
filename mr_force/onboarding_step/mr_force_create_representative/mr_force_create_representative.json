@@ -1,0 +1,8 @@
+{
+  "doctype": "Onboarding Step",
+  "name": "MR Force Create Representative",
+  "title": "Create your first Medical Representative",
+  "action": "Create Entry",
+  "reference_document": "Medical Representative",
+  "is_complete": 0
+}
