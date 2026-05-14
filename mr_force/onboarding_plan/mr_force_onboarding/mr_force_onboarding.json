@@ -1,0 +1,14 @@
+{
+  "doctype": "Onboarding",
+  "name": "MR Force Onboarding",
+  "title": "Set up MR Force",
+  "subtitle": "Prepare field-force operations in minutes",
+  "module": "MR Force",
+  "success_message": "MR Force is ready for field operations.",
+  "steps": [
+    {
+      "step": "MR Force Create Representative"
+    }
+  ],
+  "is_complete": 0
+}
