@@ -1,0 +1,157 @@
+{
+  "doctype": "Workspace",
+  "name": "MR Force",
+  "label": "MR Force",
+  "title": "MR Force",
+  "module": "MR Force",
+  "public": 1,
+  "is_hidden": 0,
+  "icon": "mr-force",
+  "indicator_color": "blue",
+  "content": "[{\"id\":\"kpi\",\"type\":\"header\",\"data\":{\"text\":\"MR Force Command Center\",\"col\":12}},{\"id\":\"cards\",\"type\":\"card\",\"data\":{\"card_name\":\"MR Force Operations\",\"col\":4}},{\"id\":\"masters\",\"type\":\"card\",\"data\":{\"card_name\":\"MR Force Masters\",\"col\":4}},{\"id\":\"analytics\",\"type\":\"card\",\"data\":{\"card_name\":\"MR Force Analytics\",\"col\":4}}]",
+  "shortcuts": [
+    {
+      "label": "Doctor Visit",
+      "type": "DocType",
+      "link_to": "Doctor Visit",
+      "color": "Blue"
+    },
+    {
+      "label": "Daily Activity Report",
+      "type": "DocType",
+      "link_to": "Daily Activity Report",
+      "color": "Green"
+    },
+    {
+      "label": "Visit Plan",
+      "type": "DocType",
+      "link_to": "Visit Plan",
+      "color": "Purple"
+    },
+    {
+      "label": "Doctor Profile",
+      "type": "DocType",
+      "link_to": "Doctor Profile",
+      "color": "Cyan"
+    },
+    {
+      "label": "Geo Checkin",
+      "type": "DocType",
+      "link_to": "Geo Checkin",
+      "color": "Orange"
+    }
+  ],
+  "links": [
+    {
+      "label": "Operations",
+      "type": "Card Break"
+    },
+    {
+      "label": "Doctor Visits",
+      "type": "Link",
+      "link_type": "DocType",
+      "link_to": "Doctor Visit"
+    },
+    {
+      "label": "Visit Plans",
+      "type": "Link",
+      "link_type": "DocType",
+      "link_to": "Visit Plan"
+    },
+    {
+      "label": "Daily Activity Reports",
+      "type": "Link",
+      "link_type": "DocType",
+      "link_to": "Daily Activity Report"
+    },
+    {
+      "label": "Masters",
+      "type": "Card Break"
+    },
+    {
+      "label": "Medical Representatives",
+      "type": "Link",
+      "link_type": "DocType",
+      "link_to": "Medical Representative"
+    },
+    {
+      "label": "Doctors",
+      "type": "Link",
+      "link_type": "DocType",
+      "link_to": "Doctor Profile"
+    },
+    {
+      "label": "Pharmacies",
+      "type": "Link",
+      "link_type": "DocType",
+      "link_to": "Pharmacy Profile"
+    },
+    {
+      "label": "Territories",
+      "type": "Link",
+      "link_type": "DocType",
+      "link_to": "Territory Coverage"
+    },
+    {
+      "label": "Analytics",
+      "type": "Card Break"
+    },
+    {
+      "label": "Field Productivity Summary",
+      "type": "Link",
+      "link_type": "Report",
+      "link_to": "Field Productivity Summary"
+    },
+    {
+      "label": "Territory Coverage Report",
+      "type": "Link",
+      "link_type": "Report",
+      "link_to": "Territory Coverage Report"
+    },
+    {
+      "label": "Daily Activity Summary",
+      "type": "Link",
+      "link_type": "Report",
+      "link_to": "Daily Activity Summary"
+    }
+  ],
+  "charts": [
+    {
+      "chart_name": "Monthly Doctor Visit Trend",
+      "label": "Monthly Doctor Visit Trend"
+    },
+    {
+      "chart_name": "Visit Status Mix",
+      "label": "Visit Status Mix"
+    }
+  ],
+  "number_cards": [
+    {
+      "label": "Total Doctor Visits",
+      "number_card_name": "Total Doctor Visits"
+    },
+    {
+      "label": "Today Visits",
+      "number_card_name": "Today Visits"
+    },
+    {
+      "label": "Pending Visits",
+      "number_card_name": "Pending Visits"
+    },
+    {
+      "label": "Active Doctors",
+      "number_card_name": "Active Doctors"
+    }
+  ],
+  "roles": [
+    {
+      "role": "MR Force Manager"
+    },
+    {
+      "role": "Medical Representative"
+    },
+    {
+      "role": "System Manager"
+    }
+  ]
+}

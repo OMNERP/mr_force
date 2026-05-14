@@ -1,0 +1,43 @@
+[
+  {
+    "doctype": "Number Card",
+    "name": "Total Doctor Visits",
+    "label": "Total Doctor Visits",
+    "module": "MR Force",
+    "document_type": "Doctor Visit",
+    "function": "Count",
+    "is_public": 1,
+    "show_percentage_stats": 1,
+    "filters_json": "[]"
+  },
+  {
+    "doctype": "Number Card",
+    "name": "Today Visits",
+    "label": "Today Visits",
+    "module": "MR Force",
+    "document_type": "Doctor Visit",
+    "function": "Count",
+    "is_public": 1,
+    "filters_json": "[[\"Doctor Visit\",\"visit_date\",\"=\",\"Today\",false]]"
+  },
+  {
+    "doctype": "Number Card",
+    "name": "Pending Visits",
+    "label": "Pending Visits",
+    "module": "MR Force",
+    "document_type": "Doctor Visit",
+    "function": "Count",
+    "is_public": 1,
+    "filters_json": "[[\"Doctor Visit\",\"status\",\"in\",[\"Planned\",\"In Progress\"],false]]"
+  },
+  {
+    "doctype": "Number Card",
+    "name": "Active Doctors",
+    "label": "Active Doctors",
+    "module": "MR Force",
+    "document_type": "Doctor Profile",
+    "function": "Count",
+    "is_public": 1,
+    "filters_json": "[[\"Doctor Profile\",\"status\",\"=\",\"Active\",false]]"
+  }
+]

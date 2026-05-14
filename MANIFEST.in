@@ -1,0 +1,3 @@
+recursive-include mr_force *.json *.py *.js *.css *.svg *.txt *.html
+include README.md
+include license.txt
