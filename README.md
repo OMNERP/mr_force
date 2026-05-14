@@ -22,3 +22,7 @@ bench --site <site> execute mr_force.api.reporting.dashboard_kpis
 bench --site <site> list-apps
 bench --site <site> migrate
 ```
+
+## Frappe module layout
+
+The app uses the standard Frappe module import path `mr_force.mr_force`. Standard DocType controllers live under `mr_force/mr_force/doctype/<doctype>/<doctype>.py`, so Frappe imports `Doctor Specialty` from `mr_force.mr_force.doctype.doctor_specialty.doctor_specialty` instead of falling back to `frappe.core`.

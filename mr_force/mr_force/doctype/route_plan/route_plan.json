@@ -1,0 +1,99 @@
+{
+  "doctype": "DocType",
+  "name": "Route Plan",
+  "module": "MR Force",
+  "custom": 0,
+  "istable": 0,
+  "is_submittable": 0,
+  "autoname": "field:route_name",
+  "title_field": "route_name",
+  "track_changes": 1,
+  "allow_rename": 1,
+  "fields": [
+    {
+      "label": "Route Name",
+      "fieldname": "route_name",
+      "fieldtype": "Data",
+      "reqd": 1
+    },
+    {
+      "label": "Medical Representative",
+      "fieldname": "medical_representative",
+      "fieldtype": "Link",
+      "options": "Medical Representative"
+    },
+    {
+      "label": "Territory",
+      "fieldname": "territory",
+      "fieldtype": "Link",
+      "options": "Territory Coverage"
+    },
+    {
+      "label": "Start Date",
+      "fieldname": "start_date",
+      "fieldtype": "Date"
+    },
+    {
+      "label": "End Date",
+      "fieldname": "end_date",
+      "fieldtype": "Date"
+    },
+    {
+      "label": "Route GeoJSON",
+      "fieldname": "route_geojson",
+      "fieldtype": "Long Text"
+    },
+    {
+      "label": "Optimization Status",
+      "fieldname": "optimization_status",
+      "fieldtype": "Select",
+      "options": "Not Optimized\nOptimized\nNeeds Review",
+      "default": "Not Optimized"
+    }
+  ],
+  "permissions": [
+    {
+      "role": "System Manager",
+      "read": 1,
+      "write": 1,
+      "create": 1,
+      "delete": 1,
+      "submit": 1,
+      "cancel": 1,
+      "amend": 1,
+      "export": 1,
+      "print": 1,
+      "email": 1,
+      "report": 1,
+      "share": 1
+    },
+    {
+      "role": "MR Force Manager",
+      "read": 1,
+      "write": 1,
+      "create": 1,
+      "delete": 1,
+      "submit": 1,
+      "cancel": 1,
+      "amend": 1,
+      "export": 1,
+      "print": 1,
+      "email": 1,
+      "report": 1,
+      "share": 1
+    },
+    {
+      "role": "Medical Representative",
+      "read": 1,
+      "write": 1,
+      "create": 1,
+      "export": 1,
+      "print": 1,
+      "email": 1,
+      "report": 1
+    }
+  ],
+  "sort_field": "modified",
+  "sort_order": "DESC",
+  "engine": "InnoDB"
+}

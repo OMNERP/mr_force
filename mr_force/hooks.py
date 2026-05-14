@@ -23,6 +23,7 @@ doctype_calendar_js = {
 }
 
 after_install = "mr_force.install.after_install"
+before_migrate = "mr_force.install.before_migrate"
 after_migrate = "mr_force.install.after_migrate"
 before_uninstall = "mr_force.install.before_uninstall"
 
