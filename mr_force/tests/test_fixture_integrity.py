@@ -41,3 +41,30 @@ def test_asset_bundles_are_self_contained():
     assert "@import" not in css_bundle
     assert 'import "./' not in js_bundle
     assert "mr_force.capture_location" in js_bundle
+
+
+def test_workspace_content_references_existing_widgets():
+    workspace = json.loads(
+        (ROOT / "mr_force" / "mr_force" / "workspace" / "mr_force" / "mr_force.json").read_text()
+    )
+    content = json.loads(workspace["content"])
+    shortcut_names = {row["label"] for row in workspace["shortcuts"]}
+    card_names = {row["label"] for row in workspace["links"] if row.get("type") == "Card Break"}
+    chart_names = {row["chart_name"] for row in workspace["charts"]}
+    number_card_names = {row["number_card_name"] for row in workspace["number_cards"]}
+
+    assert any(block["type"] == "shortcut" for block in content)
+    assert any(block["type"] == "card" for block in content)
+    assert any(block["type"] == "chart" for block in content)
+    assert any(block["type"] == "number_card" for block in content)
+
+    for block in content:
+        data = block.get("data", {})
+        if block["type"] == "shortcut":
+            assert data["shortcut_name"] in shortcut_names
+        elif block["type"] == "card":
+            assert data["card_name"] in card_names
+        elif block["type"] == "chart":
+            assert data["chart_name"] in chart_names
+        elif block["type"] == "number_card":
+            assert data["number_card_name"] in number_card_names
