@@ -1,0 +1,114 @@
+{
+  "doctype": "DocType",
+  "name": "Daily Activity Report",
+  "module": "MR Force",
+  "custom": 0,
+  "istable": 0,
+  "is_submittable": 1,
+  "autoname": "format:DAR-.#####",
+  "title_field": "medical_representative",
+  "track_changes": 1,
+  "allow_rename": 1,
+  "fields": [
+    {
+      "label": "Report Date",
+      "fieldname": "report_date",
+      "fieldtype": "Date",
+      "reqd": 1
+    },
+    {
+      "label": "Medical Representative",
+      "fieldname": "medical_representative",
+      "fieldtype": "Link",
+      "options": "Medical Representative",
+      "reqd": 1
+    },
+    {
+      "label": "Territory",
+      "fieldname": "territory",
+      "fieldtype": "Link",
+      "options": "Territory Coverage"
+    },
+    {
+      "label": "Doctor Visits",
+      "fieldname": "doctor_visits",
+      "fieldtype": "Int",
+      "default": 0
+    },
+    {
+      "label": "Pharmacy Visits",
+      "fieldname": "pharmacy_visits",
+      "fieldtype": "Int",
+      "default": 0
+    },
+    {
+      "label": "Samples Distributed",
+      "fieldname": "samples_distributed",
+      "fieldtype": "Int",
+      "default": 0
+    },
+    {
+      "label": "Expenses Claimed",
+      "fieldname": "expenses_claimed",
+      "fieldtype": "Currency",
+      "default": 0
+    },
+    {
+      "label": "Summary",
+      "fieldname": "summary",
+      "fieldtype": "Text Editor"
+    },
+    {
+      "label": "Status",
+      "fieldname": "status",
+      "fieldtype": "Select",
+      "options": "Draft\nSubmitted\nApproved\nRejected",
+      "default": "Draft"
+    }
+  ],
+  "permissions": [
+    {
+      "role": "System Manager",
+      "read": 1,
+      "write": 1,
+      "create": 1,
+      "delete": 1,
+      "submit": 1,
+      "cancel": 1,
+      "amend": 1,
+      "export": 1,
+      "print": 1,
+      "email": 1,
+      "report": 1,
+      "share": 1
+    },
+    {
+      "role": "MR Force Manager",
+      "read": 1,
+      "write": 1,
+      "create": 1,
+      "delete": 1,
+      "submit": 1,
+      "cancel": 1,
+      "amend": 1,
+      "export": 1,
+      "print": 1,
+      "email": 1,
+      "report": 1,
+      "share": 1
+    },
+    {
+      "role": "Medical Representative",
+      "read": 1,
+      "write": 1,
+      "create": 1,
+      "export": 1,
+      "print": 1,
+      "email": 1,
+      "report": 1
+    }
+  ],
+  "sort_field": "modified",
+  "sort_order": "DESC",
+  "engine": "InnoDB"
+}
