@@ -68,3 +68,11 @@ def test_workspace_content_references_existing_widgets():
             assert data["chart_name"] in chart_names
         elif block["type"] == "number_card":
             assert data["number_card_name"] in number_card_names
+
+
+def test_number_card_date_filters_use_timespan_not_date_literals():
+    for card in _load_fixture("number_card.json"):
+        for filter_row in json.loads(card["filters_json"]):
+            if len(filter_row) >= 4 and filter_row[1] == "visit_date":
+                assert filter_row[2] == "Timespan", card.get("name")
+                assert str(filter_row[3]).lower() == "today", card.get("name")

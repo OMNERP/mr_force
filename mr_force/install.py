@@ -31,6 +31,7 @@ def after_install() -> None:
     repair_doctype_modules()
     ensure_roles()
     ensure_seed_records()
+    ensure_dashboard_filters()
     ensure_workspace_layout()
 
 
@@ -44,6 +45,7 @@ def after_migrate() -> None:
     repair_doctype_modules()
     ensure_roles()
     ensure_seed_records()
+    ensure_dashboard_filters()
     ensure_workspace_layout()
 
 
@@ -98,6 +100,17 @@ def ensure_seed_records() -> None:
                 field = "activity_type" if doctype == "Activity Type" else "specialty"
                 setattr(doc, field, name)
                 doc.insert(ignore_permissions=True)
+
+
+def ensure_dashboard_filters() -> None:
+    if not frappe.db.table_exists("Number Card"):
+        return
+
+    today_visit_filter = json.dumps([["Doctor Visit", "visit_date", "Timespan", "today", False]], separators=(",", ":"))
+    if frappe.db.exists("Number Card", "Today Visits"):
+        frappe.db.set_value("Number Card", "Today Visits", "filters_json", today_visit_filter)
+        frappe.clear_cache(doctype="Number Card")
+
 
 
 def ensure_workspace_layout() -> None:

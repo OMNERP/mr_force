@@ -18,7 +18,7 @@
     "document_type": "Doctor Visit",
     "function": "Count",
     "is_public": 1,
-    "filters_json": "[[\"Doctor Visit\",\"visit_date\",\"=\",\"Today\",false]]"
+    "filters_json": "[[\"Doctor Visit\",\"visit_date\",\"Timespan\",\"today\",false]]"
   },
   {
     "doctype": "Number Card",
